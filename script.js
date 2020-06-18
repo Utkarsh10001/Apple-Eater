@@ -24,7 +24,7 @@ var game=new Phaser.Game(config);
 function preload(){
     this.load.image('ground',"Assets/topground.png");
     this.load.image('sky','Assets/background.png');
-    this.load.spritesheet("dude","assets/dude.png",{frameWidth:32,frameHeight:48});
+    this.load.spritesheet("dude","Assets/dude.png",{frameWidth:32,frameHeight:48});
     this.load.image('apple',"Assets/apple.png");
 }
 function create(){
@@ -112,10 +112,10 @@ function update(){
     //console.log(this.pointer);
     if(this.cursors.left.isDown){
         this.player.setVelocityX(-150);
-      //  this.player.anims.play('left',true);
+        this.player.anims.play('left',true);
     }else if(this.cursors.right.isDown){
         this.player.setVelocityX(+150);
-      //  this.player.anims.play('right',true);
+        this.player.anims.play('right',true);
     }else if(this.cursors.up.isDown&&this.player.body.touching.down){
         this.player.setVelocityY(-650);
         this.player.anims.play('stay',true);
@@ -135,23 +135,21 @@ function update(){
                 this.player.setVelocityY(-650);
                 this.player.anims.play('stay',true);
             }else if(mx>px){
-                //right
-                
+                //right 
                 this.player.setVelocityX(+150);
-                //this.player.anims.play('right',true);
+                this.player.anims.play('right',true);
             }else if(mx<=px){
              //left
                 this.player.setVelocityX(-150);
-               // this.player.anims.play('left',true);
+                this.player.anims.play('left',true);
             }else{
-            
                 this.player.setVelocityX(0);
                 this.player.anims.play('stay',true);
         }
         }else{
             
                 this.player.setVelocityX(0);
-           //     this.player.anims.play('stay',true);
+                this.player.anims.play('stay',true);
         }
     }           
     //console.log(this.input.activePointer.x,this.input.activePointer.y);
