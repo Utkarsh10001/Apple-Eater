@@ -45,25 +45,7 @@ function create(){
     this.player= this.physics.add.sprite(100,100,'dude',4);
     this.player.depth=0;
     //creating animation for the player
-    this.anims.create({
-       key:'left',
-        frames: this.anims.generateFrameNumbers('dude',{start:0,end:3}),
-        frameRate: 10,
-        repeat: -1,
-    });
-    
-    this.anims.create({
-       key:'right',
-        frames: this.anims.generateFrameNumbers('dude',{start:5,end:8}),
-        frameRate: 10,
-        repeat: -1,
-    });
-    
-    this.anims.create({
-       key: 'stay',
-        frames: [{key:'dude',frame:4}],
-        repeat: -1,
-    });
+   
     //palyer.body.bounce = 100;
     //adding collision detection between player and ground
     //this.physics.add.collider(ground,player);
@@ -112,16 +94,16 @@ function update(){
     //console.log(this.pointer);
     if(this.cursors.left.isDown){
         this.player.setVelocityX(-150);
-        this.player.anims.play('left',true);
+      //  this.player.anims.play('left',true);
     }else if(this.cursors.right.isDown){
         this.player.setVelocityX(+150);
-        this.player.anims.play('right',true);
+      //  this.player.anims.play('right',true);
     }else if(this.cursors.up.isDown&&this.player.body.touching.down){
         this.player.setVelocityY(-650);
-        this.player.anims.play('stay',true);
+       // this.player.anims.play('stay',true);
     }else if(this.cursors.down.isDown){
         this.player.setVelocityY(650);
-        this.player.anims.play('stay',true);
+        //this.player.anims.play('stay',true);
     }else{
         //this.player.setVelocityX(0);
         //this.player.anims.play('stay',true);
@@ -133,25 +115,25 @@ function update(){
             if(my<=py&&this.player.body.touching.down){
                 //up
                 this.player.setVelocityY(-650);
-                this.player.anims.play('stay',true);
+               // this.player.anims.play('stay',true);
             }else if(mx>px){
                 //right
                 
                 this.player.setVelocityX(+150);
-                this.player.anims.play('right',true);
+                //this.player.anims.play('right',true);
             }else if(mx<=px){
              //left
                 this.player.setVelocityX(-150);
-                this.player.anims.play('left',true);
+               // this.player.anims.play('left',true);
             }else{
             
                 this.player.setVelocityX(0);
-                this.player.anims.play('stay',true);
+         //       this.player.anims.play('stay',true);
         }
         }else{
             
                 this.player.setVelocityX(0);
-                this.player.anims.play('stay',true);
+           //     this.player.anims.play('stay',true);
         }
     }           
     //console.log(this.input.activePointer.x,this.input.activePointer.y);
