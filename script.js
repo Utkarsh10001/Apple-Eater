@@ -112,7 +112,7 @@ function update(){
     //console.log(this.pointer);
     if(this.cursors.left.isDown){
         this.player.setVelocityX(-150);
-  //      this.player.anims.play('left',true);
+        this.player.anims.play('left',true);
     }else if(this.cursors.right.isDown){
         this.player.setVelocityX(+150);
 //        this.player.anims.play('right',true);
@@ -141,13 +141,12 @@ function update(){
             }else if(mx<=px){
              //left
                 this.player.setVelocityX(-150);
-             //   this.player.anims.play('left',true);
+                this.player.anims.play('left',true);
             }else{
                 this.player.setVelocityX(0);
                 this.player.anims.play('stay',true);
         }
         }else{
-            
                 this.player.setVelocityX(0);
                 this.player.anims.play('stay',true);
         }
