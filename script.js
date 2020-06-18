@@ -118,10 +118,10 @@ function update(){
       //  this.player.anims.play('right',true);
     }else if(this.cursors.up.isDown&&this.player.body.touching.down){
         this.player.setVelocityY(-650);
-       // this.player.anims.play('stay',true);
+        this.player.anims.play('stay',true);
     }else if(this.cursors.down.isDown){
         this.player.setVelocityY(650);
-        //this.player.anims.play('stay',true);
+        this.player.anims.play('stay',true);
     }else{
         //this.player.setVelocityX(0);
         //this.player.anims.play('stay',true);
@@ -133,7 +133,7 @@ function update(){
             if(my<=py&&this.player.body.touching.down){
                 //up
                 this.player.setVelocityY(-650);
-               // this.player.anims.play('stay',true);
+                this.player.anims.play('stay',true);
             }else if(mx>px){
                 //right
                 
@@ -146,7 +146,7 @@ function update(){
             }else{
             
                 this.player.setVelocityX(0);
-         //       this.player.anims.play('stay',true);
+                this.player.anims.play('stay',true);
         }
         }else{
             
