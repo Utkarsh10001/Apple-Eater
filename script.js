@@ -61,7 +61,7 @@ function create(){
     
     this.anims.create({
        key: 'stay',
-        frame: [{key:'dude',frame:4}],
+        frames: [{key:'dude',frame:4}],
         repeat: -1,
     });
     //palyer.body.bounce = 100;
@@ -112,10 +112,10 @@ function update(){
     //console.log(this.pointer);
     if(this.cursors.left.isDown){
         this.player.setVelocityX(-150);
-        this.player.anims.play('left',true);
+  //      this.player.anims.play('left',true);
     }else if(this.cursors.right.isDown){
         this.player.setVelocityX(+150);
-        this.player.anims.play('right',true);
+//        this.player.anims.play('right',true);
     }else if(this.cursors.up.isDown&&this.player.body.touching.down){
         this.player.setVelocityY(-650);
         this.player.anims.play('stay',true);
@@ -137,11 +137,11 @@ function update(){
             }else if(mx>px){
                 //right 
                 this.player.setVelocityX(+150);
-                this.player.anims.play('right',true);
+            //    this.player.anims.play('right',true);
             }else if(mx<=px){
              //left
                 this.player.setVelocityX(-150);
-                this.player.anims.play('left',true);
+             //   this.player.anims.play('left',true);
             }else{
                 this.player.setVelocityX(0);
                 this.player.anims.play('stay',true);
