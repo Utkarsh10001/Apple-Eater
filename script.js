@@ -1,5 +1,5 @@
 let config={
-    type:Phaser.AUTO,
+    type:Phaser.CANVAS,
     scale:{
         width: 1200,
         height: 600,
