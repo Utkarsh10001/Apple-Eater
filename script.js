@@ -47,21 +47,21 @@ function create(){
     //creating animation for the player
    this.anims.create({
        key:'left',
-        frames: this.anims.generateFrameNumbers('dude',{start:0,end:3}),
+        frame: this.anims.generateFrameNumbers('dude',{start:0,end:3}),
         frameRate: 10,
         repeat: -1,
     });
     
     this.anims.create({
        key:'right',
-        frames: this.anims.generateFrameNumbers('dude',{start:5,end:8}),
+        frame: this.anims.generateFrameNumbers('dude',{start:5,end:8}),
         frameRate: 10,
         repeat: -1,
     });
     
     this.anims.create({
        key: 'stay',
-        frames: [{key:'dude',frame:4}],
+        frame: [{key:'dude',frame:4}],
         repeat: -1,
     });
     //palyer.body.bounce = 100;
