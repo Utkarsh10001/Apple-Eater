@@ -47,14 +47,14 @@ function create(){
     //creating animation for the player
    this.anims.create({
        key:'left',
-        frame: this.anims.generateFrameNumbers('dude',{start:0,end:3}),
+        frames: this.anims.generateFrameNumbers('dude',{start:0,end:3}),
         frameRate: 10,
         repeat: -1,
     });
     
     this.anims.create({
        key:'right',
-        frame: this.anims.generateFrameNumbers('dude',{start:5,end:8}),
+        frames: this.anims.generateFrameNumbers('dude',{start:5,end:8}),
         frameRate: 10,
         repeat: -1,
     });
